@@ -1,0 +1,55 @@
+body{
+    background-color:  rgb(236, 242, 252);
+}
+
+.boton{
+    background-color: rgb(51, 133, 247);
+    border-color: slategray;
+    border-radius: 30px;
+    width:auto;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #45a049; /* Nuevo color de fondo cuando el cursor se sitúa sobre el botón */
+  }
+
+.boton.cambiado {
+    background-color:#45a049;
+    color: white;
+  }
+
+.CardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .Card ul {
+    text-align:left; /* Justifica el texto dentro de la lista */
+  }
+
+  .Card {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px; /* Ancho fijo para cada tarjeta */
+    text-align: center; /* Centra el contenido horizontalmente */
+    display: flex; /* Activa el modelo de caja flexible */
+    flex-direction: column; /* Alinea el contenido en columna */
+    align-items: center; /* Centra el contenido verticalmente */
+    background: linear-gradient(45deg, #cfe3ff, #8ed5e6); /* Gradiente de fondo */
+}
+
+h1, h3 {
+    font-family: 'Comic Sans MS', cursive; /* Fuente más dinámica y divertida */
+    color: #333; /* Color del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
