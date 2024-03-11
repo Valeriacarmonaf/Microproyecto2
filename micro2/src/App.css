@@ -1,42 +1,92 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+body{
+    background-color:  rgb(236, 242, 252);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+.padre{
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.tamaño-imagen{
+    width: 500px;
+    height: 600px;
+    margin-top: 80px;
+
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.estilo-profile{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cajatexto{
+    background-color: #cccccc40;
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 15px;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cajatexto2{
+    background-color: #cccccc40;
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 15px;
+}
+
+.boton{
+    background-color: rgb(51, 133, 247);
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.boton:hover{
+    background-color: rgb(88, 156, 251);
 }
 
 .card {
-  padding: 2em;
+    background-color:  rgb(215, 229, 255);
+    margin-top: 80px;
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.etiqueta1{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
+
+.etiqueta2{
+    color: black;
+    font-weight: bold;
+}
+
+.boton2{
+
+    background-color: rgb(215, 229, 255);
+    border-radius: 30px;
+    padding: 8px;
+    border-width: 0px;
+    margin-bottom: 30px;
+    color: blue;
+    font-weight: lighter;
+} 
