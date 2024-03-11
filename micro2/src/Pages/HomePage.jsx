@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './HP.css'; // Importa el archivo CSS
 import aventura from "../assets/aventura.jpeg"
@@ -6,6 +7,15 @@ import construccion from "../assets/construccion.png"
 import futbol from "../assets/futbol.jpeg"
 import zombies from "../assets/zombies.jpeg"
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+// ... rest of your code ...
+
+BotonCambiante.propTypes = {
+  text: PropTypes.string.isRequired,
+  textClicked: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
 
 const BotonCambiante = ({ text, textClicked, onClick }) => {
     const [clicked, setClicked] = useState(false);
@@ -34,13 +44,13 @@ export default function Home()
         <div>
             <Link to="/profile">
                 <button className="boton">Ver perfil</button>
-            </Link>"
+            </Link>
             <Link to="/videogames">
                 <button className="boton">Buscar juegos</button>
             </Link>
             
-            <div class="CardContainer">
-                <div class="Card">
+            <div className="CardContainer">
+                <div className="Card">
                     <img src={aventura} alt="Imagen de la tarjeta" style={{ maxWidth: '100%' }}/>
                     <div>
                         <h1>Club de Aventureros</h1>
@@ -48,13 +58,13 @@ export default function Home()
                         <ul>
                             <li>The Witcher 3</li>
                             <li>The Legend of Zelda</li>
-                            <li>Assassin's Creed</li>
+                            <li>Assassins Creed</li>
                         </ul>
                         <BotonCambiante text="Suscribirse" textClicked="Suscrito" onClick={handleClickSuscribirse} />
                     </div>
                 </div>
 
-                <div class="Card">
+                <div className="Card">
                     <img src={estrategia} alt="Imagen de la tarjeta" style={{ maxWidth: '100%' }}/>
                     <div>
                         <h1>Club de Estrategia</h1>
@@ -68,7 +78,7 @@ export default function Home()
                     </div>
                 </div>
 
-                <div class="Card">
+                <div className="Card">
                     <img src={construccion} alt="Imagen de la tarjeta" style={{ maxWidth: '100%' }}/>
                     <div>
                         <h1>Club de Constructores</h1>
@@ -82,7 +92,7 @@ export default function Home()
                     </div>
                 </div>
 
-                <div class="Card">
+                <div className="Card">
                     <img src={futbol} alt="Imagen de la tarjeta" style={{ maxWidth: '100%' }}/>
                     <div>
                         <h1>Club de Fútbol Virtual</h1>
@@ -96,7 +106,7 @@ export default function Home()
                     </div>
                 </div>
 
-                <div class="Card">
+                <div className="Card">
                     <img src={zombies} alt="Imagen de la tarjeta" style={{ maxWidth: '100%' }}/>
                     <div>
                         <h1>Club de Cazadores de Zombies</h1>

@@ -1,0 +1,105 @@
+
+body{
+    background-color:  rgb(236, 242, 252);
+}
+
+
+.padre{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.tamaño-imagen{
+    width: 500px;
+    height: 600px;
+    margin-top: 80px;
+
+}
+.estilo-profile{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.cajatexto{
+    background-color: #cccccc40;
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 15px;
+    
+}
+
+.cajatexto2{
+    background-color: #cccccc40;
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 15px;
+}
+
+.boton{
+    background-color: rgb(51, 133, 247);
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.boton:hover{
+    background-color: rgb(88, 156, 251);
+}
+
+.card {
+    background-color:  rgb(215, 229, 255);
+    margin-top: 80px;
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.etiqueta1{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.etiqueta2{
+    color: black;
+    font-weight: bold;
+}
+
+.boton2{
+
+    background-color: rgb(215, 229, 255);
+    border-radius: 30px;
+    padding: 8px;
+    border-width: 0px;
+    margin-bottom: 30px;
+    color: blue;
+    font-weight: lighter;
+} 
+
+.botongoogle{
+    background-color: rgb(140, 223, 14);
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+}
+
