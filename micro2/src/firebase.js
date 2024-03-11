@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCU3GhvsGlhEJHx6JFaMKykLZXHC-gAX_g",
@@ -12,5 +14,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-export { app, db };
+export { auth, provider };
+export { app, db};

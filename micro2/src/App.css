@@ -90,3 +90,16 @@ body{
     color: blue;
     font-weight: lighter;
 } 
+
+.botongoogle{
+    background-color: rgb(140, 223, 14);
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+}
+
