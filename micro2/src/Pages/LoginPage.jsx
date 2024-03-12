@@ -7,6 +7,7 @@ import FotoPerfil from '../assets/fotodeperfil.png';
 import  {auth, provider} from '../firebase';
 import { signInWithPopup } from 'firebase/auth';
 import HomePage from './HomePage';
+import { Link } from 'react-router-dom';
 //const auth = getAuth(app);
 
 const LoginPage = () => {
@@ -22,7 +23,6 @@ const LoginPage = () => {
         await signInWithEmailAndPassword(auth, correo, contraseña);
         console.log('Inicio de sesión exitoso');
         setError(null);
-        // Aquí podrías redirigir a la página que corresponda después del inicio de sesión
       } catch (error) {
         // Manejar errores específicos
         if (error.code === 'auth/invalid-email') {
@@ -48,14 +48,16 @@ const LoginPage = () => {
               <input type="text" placeholder="mariasuarez08@gmail.com" className="cajatexto" id="email" />
               <label className="etiqueta2">Contraseña:</label>
               <input type="password" placeholder="nomegustaprogramar1234" className="cajatexto2" id="password" />
-              <button type="submit" className="boton">¡Entrar!</button>
+              <Link to="/HomePage" className='enlace'>
+                <button type="submit" className="boton">¡Entrar!</button>
+              </Link>
             </form>
             {error && <p className="error-message">{error}</p>}
             <h4>
               ¿No tienes una cuenta?
-              <a href="/RegistroPage.jsx" className="enlace">
-                Regístrate aquí
-              </a>
+              <Link to="/" className='enlace'>
+                  Regístrate aquí
+                </Link>
             </h4>
           </div>
         </div>

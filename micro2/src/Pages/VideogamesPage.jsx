@@ -1,4 +1,3 @@
-import React from 'react';
 import VideoGameCard from './VideoGameCard';
 import videogamesData from '../videogames.json';
 

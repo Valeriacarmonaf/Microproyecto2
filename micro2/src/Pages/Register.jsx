@@ -8,10 +8,41 @@ import FotoPerfil from '../assets/fotodeperfil.png';
 import  {auth, provider} from '../firebase';
 import { signInWithPopup } from 'firebase/auth';
 import HomePage from './HomePage';
-
+import { Link } from 'react-router-dom';
 //const auth = getAuth(app);
 
 const Register = () => {
+
+  const [nombre, setNombre] = useState('');
+  const [usuario, setUsuario] = useState('');
+  const [correoElectronico, setCorreoElectronico] = useState('');
+
+  // Funciones para manejar el cambio en los campos de texto
+  const handleNombreChange = (event) => {
+    setNombre(event.target.value);
+  };
+
+  const handleUsuarioChange = (event) => {
+    setUsuario(event.target.value);
+  };
+
+  const handleCorreoElectronicoChange = (event) => {
+    setCorreoElectronico(event.target.value);
+  };
+
+  // Funciones para manejar el evento de pérdida de foco y guardar en localStorage
+  const handleNombreBlur = () => {
+    localStorage.setItem('nombre', nombre);
+  };
+
+  const handleUsuarioBlur = () => {
+    localStorage.setItem('usuario', usuario);
+  };
+
+  const handleCorreoElectronicoBlur = () => {
+    localStorage.setItem('correoElectronico', correoElectronico);
+  };
+
   const [registrando, setRegistrando] = useState(false);
 
   const funcAutenticacion = async (e) => {
@@ -47,18 +78,21 @@ const Register = () => {
             <img src={FotoPerfil} alt="Foto de perfil" className="estilo-profile" />
             <form onSubmit={funcAutenticacion}>
               <label className="etiqueta1">Nombre:</label>
-              <input type="text" placeholder="María" className="cajatexto" id="name" />
+              <input type="text" value={nombre} onChange={handleNombreChange} onBlur={handleNombreBlur} placeholder="María" className="cajatexto" id="name" />
               <label className="etiqueta1">Correo electrónico:</label>
-              <input type="text" placeholder="mariasuarez08@gmail.com" className="cajatexto" id="email" />
+              <input type="text" value={correoElectronico} onChange={handleCorreoElectronicoChange} onBlur={handleCorreoElectronicoBlur} placeholder="mariasuarez08@gmail.com" className="cajatexto" id="email" />
               <label className="etiqueta2">Contraseña:</label>
-              <input type="password" placeholder="nomegustaprogramar1234" className="cajatexto2" id="password" />
-              <button className="boton">¡Registrarme!</button>
+              <input type="password" value={usuario} onChange={handleUsuarioChange} onBlur={handleUsuarioBlur} placeholder="nomegustaprogramar1234" className="cajatexto2" id="password" />
+              <Link to="/login" className='enlace'>
+                <button className="boton">¡Registrarme!</button>
+              </Link>
             </form>
             <h4>
               ¿Ya tienes una cuenta?
-                <a href="/LoginPage.jsx" className="enlace">
+
+                <Link to="/login" className='enlace'>
                   Inicia sesión
-                </a>
+                </Link>
             </h4>
           </div>
         </div>

@@ -7,7 +7,6 @@ import Home from './Pages/HomePage';
 import LoginPage from './Pages/LoginPage';
 import { loadClubsData } from './Services/loadData';
 import { loadGamesData } from './Services/loadGamesData'; 
-
 import './App.css';
 
 const auth = getAuth(app);

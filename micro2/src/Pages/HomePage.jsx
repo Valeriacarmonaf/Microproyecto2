@@ -9,13 +9,6 @@ import zombies from "../assets/zombies.jpeg"
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-// ... rest of your code ...
-
-BotonCambiante.propTypes = {
-  text: PropTypes.string.isRequired,
-  textClicked: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-};
 
 const BotonCambiante = ({ text, textClicked, onClick }) => {
     const [clicked, setClicked] = useState(false);
@@ -123,3 +116,9 @@ export default function Home()
         </div>
       );
 }
+
+BotonCambiante.propTypes = {
+    text: PropTypes.string.isRequired,
+    textClicked: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
+  };
