@@ -1,8 +1,10 @@
-import React from 'react';
+// Removed unused import statement for React
 import './GamesCard.css';
 
 // Definir una lista de colores dinámicos
 const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99', '#ff99ff', '#99ffff'];
+
+import PropTypes from 'prop-types';
 
 const VideoGameCard = ({ game }) => {
   // Seleccionar un color de la lista para la tarjeta actual
@@ -18,6 +20,10 @@ const VideoGameCard = ({ game }) => {
       </div>
     </div>
   );
+};
+
+VideoGameCard.propTypes = {
+  game: PropTypes.object.isRequired,
 };
 
 export default VideoGameCard;
